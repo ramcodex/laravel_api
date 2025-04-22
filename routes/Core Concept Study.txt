@@ -1,0 +1,25 @@
+File Storage and Uploads
+Database and Eloquent ORM
+Authentication and Authorization
+Laravel Queues and Jobs
+Testing
+Cache and Performance Optimization
+Understand All Bug and Error Sample or List
+Laravel Package Development
+Laravel Scheduler
+File Storage and Uploads
+Laravel Horizon (Advanced Queues and Monitoring)
+Service Container and Dependency Injection
+Laravel Localization (Translations)
+Events and Listeners
+Custom Artisan Commands
+HTTP Status Code Type
+API Rate Limiting
+Service Providers and Facades
+Laravel Crud Practice
+.Env 
+What is the difference between PUT and PATCH in Laravel routing? 
+How do you encrypt data in Laravel?
+Php artisan Commands
+Helper Functions
+Laravel All Array Practice.
