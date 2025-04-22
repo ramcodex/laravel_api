@@ -26,6 +26,15 @@ class PostController extends Controller
                     'errors' => $validator->errors(),
                 ], 422);
             }
+
+            // Create Post
+            $post = Post::create([
+                'title' => $request->title,
+                'note'  => $request->note,
+            ]);
+
+            
+           
             
         } catch (QueryException $e) {
             
