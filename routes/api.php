@@ -8,4 +8,4 @@ Route::get('/user', function () {
     return auth()->user();
 });
 
-Route::post('/posts', [PostController::class, 'store']);
+Route::post('/posts/store', [PostController::class, 'store']);
