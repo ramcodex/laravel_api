@@ -14,22 +14,22 @@ class PostController extends Controller
     {
         try {
              // Inline validation
-            // $validator = Validator::make($request->all(), [
-            //     'title' => 'required|string|max:255',
-            //     'note'  => 'required|string',
-            // ], [
-            //     'title.required' => 'A title is required',
-            //     'title.max' => 'Title cannot be more than 255 characters',
-            //     'note.required' => 'Content is required for the post',
-            // ]);
+            $validator = Validator::make($request->all(), [
+                'title' => 'required|string|max:255',
+                'note'  => 'required|string',
+            ], [
+                'title.required' => 'A title is required',
+                'title.max' => 'Title cannot be more than 255 characters',
+                'note.required' => 'Content is required for the post',
+            ]);
 
-            // if ($validator->fails()) {
-            //     return response()->json([
-            //         'status' => false,
-            //         'message' => 'Validation errors',
-            //         'errors' => $validator->errors(),
-            //     ], 422);
-            // }
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Validation errors',
+                    'errors' => $validator->errors(),
+                ], 422);
+            }
 
             // Create Post
             $post = Post::create([
