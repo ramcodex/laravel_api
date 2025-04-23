@@ -18,6 +18,8 @@ git restore, git restore --staged, git reset --soft, git reset --hard, git stash
 🔹 Debugging & Inspection
 git blame, git reflog
 
+git checkout -b login-feature
+
 ---------------------------------------------------------------$_COOKIE
 
 git --version                          # Check installed Git version.

@@ -58,4 +58,8 @@ class PostController extends Controller
             ], 500);
         }
     }
+
+    public function show(){
+        return "getting post here";
+    }
 }

@@ -9,3 +9,4 @@ Route::get('/user', function () {
 });
 
 Route::post('/posts/store', [PostController::class, 'store']);
+Route::get('post/show', [PostController::class, 'show']);
