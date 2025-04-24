@@ -18,7 +18,12 @@ git restore, git restore --staged, git reset --soft, git reset --hard, git stash
 🔹 Debugging & Inspection
 git blame, git reflog
 
-git checkout -b login-feature
+git checkout -b branch-name   # create & switch
+git push -u origin branch-name
+git checkout main             # back to main
+git branch -d login-feature
+git push origin --delete login-feature
+
 
 ---------------------------------------------------------------$_COOKIE
 

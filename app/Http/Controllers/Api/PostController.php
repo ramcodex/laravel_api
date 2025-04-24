@@ -60,6 +60,52 @@ class PostController extends Controller
     }
 
     public function show(){
-        return "getting post here";
+        try {
+              $getPost = Post::all();
+              return response()->json([
+                'status' => true,
+                'message' => "fetched success fully",
+                'data' => $getPost,
+
+              ],200);
+        } catch (QueryException $e) {
+             return response()->json([
+                 'status'=> false,
+                 'message'=> 'server error',
+                 'error' => $e->getMessage()
+             ],500);
+        }
+    }
+
+    public function update(Request $request, $id)
+    {
+        //return $id;
+        //$getPost = Post::findOrFail($id);
+        try {
+        //     $post = Post::where('id', $id)->update([
+        //         'title' => $request->title,
+        //         'note' => $request->note
+        //    ]);
+           $post = Post::findOrFail($id);
+
+           $post->update([
+            'title' => $request->title,
+            'note' => $request->note
+           ]);
+           
+           return response()->json([
+            'status' => true,
+            'message' => 'Post updated successfully!',
+            'data' => $post,
+           ], 200);
+        } catch(QueryException $e)
+        {
+            return response()->json([
+                'status' => false,
+                'message' => 'Got server error',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+
     }
 }
