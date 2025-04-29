@@ -17,3 +17,4 @@ Route::put('post/update/{id}', [PostController::class, 'update']);
 Route::post('/login', [AuthController::class, 'login']);
 
 //Adding on main branch.
+//adding this coding to main branch by sernior
